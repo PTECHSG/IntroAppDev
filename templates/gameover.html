@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>:.: Game Over :.:</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{{ url_for('static', filename='css/one-page-wonder.css') }}" rel="stylesheet">
+
+</head>
+
+<body>
+ <header class="masthead text-center text-white">
+   <br><br><br><br><br>
+    <div class="masthead-content">
+        <div class="container">
+          <h2 class="masthead-heading mb-2">Game Over !!!!!</h3>
+          <h3>Hello {{name}}, your score is <b>{{score}}</b></h3>
+          <p><button type="button" id='startgame' name="startgame" class="btn btn-warning btn-lg mb-2">Start Game Now >>></button></p>
+        </div>
+      </div>
+      <br><br><br>
+      <div style="height: 100px;"></div>
+</header>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script>
+      $(function() {
+        $('#startgame').click(function () {
+            redirectTo();
+        });
+    });
+
+    function redirectTo() {
+      window.location.href='/';
+    }
+  </script>
+
+</body>
+
+</html>
