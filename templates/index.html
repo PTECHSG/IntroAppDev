@@ -59,13 +59,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">That's a good try !!!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
-        <div class="modal-body">
-          Its not correct this time !!! 
-          <br><br>
+        <div class="modal-body text-center">
+          <img src={{ url_for('static', filename='img/cross.png') }} width="150px"> 
+          <br>
           Try Next Guess !!!
         </div>
         <div class="modal-footer">
@@ -81,13 +78,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">You are Correct !!!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
-        <div class="modal-body">
-          Congrats !!!
-          <br><br>
+        <div class="modal-body text-center">
+          <b>Awsome !!!</b><br>
+          <img src={{ url_for('static', filename='img/correct.png') }} width="150px"> 
+          <br>
           Try next Guess !!!
         </div>
         <div class="modal-footer">
