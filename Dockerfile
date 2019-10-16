@@ -4,3 +4,4 @@ WORKDIR /code
 # install dependencies
 RUN pip install -r requirements.txt
 CMD python app.py
+EXPOSE 80/tcp
