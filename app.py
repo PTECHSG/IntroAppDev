@@ -30,7 +30,8 @@ def index():
     data['score'] = session['userscore'] # Score
     session['total'] -= 1  # Decrementing the Number of questions
     # Storing the name to guss in redis
-    redis.set('secret', str(data['guess']['name']))
+    # redis.set('secret', str(data['guess']['name']))
+    session['secret'] = str(data['guess']['name'])
     # Passing personality image, name to guess, Score to UI
     return render_template('index.html', data=data )
 
@@ -68,7 +69,8 @@ def checkguess():
         guess = request.form['myguess']
         index = request.form['index']
         # Reading from redis
-        chkData = redis.get('secret').decode()
+        #chkData = redis.get('secret').decode()
+        chkData = session['secret']
         # Comparing the secret and guess
         if chkData == guess.lower():
             session['userscore'] += 10
