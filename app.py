@@ -57,7 +57,7 @@ def startGame():
             # Initial score set as 0
             session['userscore'] = 0
             # Total Questions
-            session['total'] = 10
+            session['total'] = 5
             return "startGame"
 
 @app.route('/checkguess', methods=['POST'])

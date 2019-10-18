@@ -53,8 +53,18 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.1rem;
 }
-
-header.masthead {
+body.masthead {
+  position: relative;
+  padding-top: calc(7rem + 30px);
+  background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+/* header.masthead {
   position: relative;
   overflow: hidden;
   padding-top: calc(7rem + 72px);
@@ -64,7 +74,7 @@ header.masthead {
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
-}
+} */
 
 header.masthead .masthead-content {
   z-index: 1;
