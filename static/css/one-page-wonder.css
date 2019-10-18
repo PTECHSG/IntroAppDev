@@ -55,7 +55,6 @@ h6 {
 }
 body.masthead {
   position: relative;
-  padding-top: calc(7rem + 30px);
   background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%);
   background-repeat: no-repeat;
   background-position: center center;

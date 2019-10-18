@@ -30,8 +30,8 @@ def index():
     data['score'] = session['userscore'] # Score
     session['total'] -= 1  # Decrementing the Number of questions
     # Storing the name to guss in redis
-     redis.set('secret', str(data['guess']['name']))
-    # session['secret'] = str(data['guess']['name'])
+    # redis.set('secret', str(data['guess']['name']))
+    session['secret'] = str(data['guess']['name'])
     # Passing personality image, name to guess, Score to UI
     return render_template('index.html', data=data )
 
